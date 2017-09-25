@@ -74,3 +74,9 @@
   오늘날의 가장 인기있는 트렌스파일러들은 [Traceur](https://github.com/google/traceur-compiler)와 [Babel](https://.babeljs.io/)입니다. 이들을 설정하는것은 쉽습니다. [https://github.com/google/traceur-compiler/wiki/Getting-Started](https://github.com/google/traceur-compiler/wiki/Getting-Started)나 [http://babeljs.io/docs/setup/](http://babeljs.io/docs/setup/) 같은 튜토리얼을 따라하면 됩니다.
   <br />
   이 책에서는, 특별히 브라우저에서 자바스크립트 코드를 실행하는데 집중할 것입니다. 브라우저 플랫폼을 효과적으로 사용하려면 브라우저 내부의 동작을 연구해야합니다.
+
+<a name="understanding-the-browser"></a>
+### 1.2 브라우저의 이해
+  오늘날, 자바스크립트 어플리케이션들은 다양한 환경에서 실행될 수 있습니다. 하지만 그 모든 것이 시작하고, 다른 모든 환경들이 아이디어를 얻은, 우리가 집중할 환경은 바로 *브라우저* 입니다. 브라우저는 우리가 볼 다양한 개념과 API들을 제공합니다.
+  ![Figure1.1](assets/figure1.1.png)
+  <caption>Figure1.1 클라이언트 웹 어플리케이션은 브라우저가 제공하는 기반시설에 의존합니다. 우리는 특별히 DOM, 이벤트, 타이머 그리고 브라우저 API에 집중할 것입니다.</caption>
