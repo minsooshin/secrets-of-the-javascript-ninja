@@ -1,13 +1,13 @@
 # Secrets of JavaScript Ninja 한글 번역
 
-목차<a name="#table-of-contents"></a>
+목차 <a name="#table-of-contents"></a>
 
 1. [자바스크립트는 어디에나 있다](#javascript-is-everywhere)
-    1. 자바스크립트 언어의 이해
-    2. 브라우저의 이해
-    3. 최신 기술의 응용
-    4. 기술 이동의 신장
-    5. 요약
+    1. [자바스크립트 언어의 이해](#understanding-the-javascript-language)
+    2. [브라우저의 이해](#understanding-the-browser)
+    3. [최신 기술의 응용](#using-current-best-practices)
+    4. [기술 이동의 신장](#boosting-skill-transferability)
+    5. [요약](#chapter-1-summary)
 
 2. [실시간으로 페이지 구축하기](#building-the-page-at-runtime)
     1. 라이프사이클 개요
@@ -50,4 +50,6 @@
     6. 예제
 
 ## 자바스크립트는 어디에나 있다 <a name="javascript-is-everywhere"></a>
+
+### 자바스크립트 언어의 이해 <a name="understanding-the-javascript-language"></a>
 **[⬆ back to top](#table-of-contents)**
