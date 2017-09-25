@@ -1,6 +1,6 @@
 # Secrets of JavaScript Ninja 한글 번역
 
-목차 <a name="#table-of-contents"></a>
+목차 <a name="table-of-contents"></a>
 
 1. [자바스크립트는 어디에나 있다](#javascript-is-everywhere)
     1. [자바스크립트 언어의 이해](#understanding-the-javascript-language)
