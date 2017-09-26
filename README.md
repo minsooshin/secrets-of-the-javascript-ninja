@@ -11,8 +11,8 @@
     4. [기술 전달 능력 향상](Chapter1.md#boosting-skill-transferability)
     5. [요약](Chapter1.md#summary)
 
-2. [실시간으로 페이지 구축하기](#building-the-page-at-runtime)
-    1. 라이프사이클 개요
+2. [실행 시간에 페이지 구축하기](Chapter2.md#building-the-page-at-runtime)
+    1. [라이프사이클 개요](Chapter2.md#the-lifecycle-overview)
     2. 페이지 구축 단계
     3. 이벤트 처리
     4. 요약
