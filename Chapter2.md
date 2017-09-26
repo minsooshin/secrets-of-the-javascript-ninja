@@ -62,7 +62,7 @@
         }
 
         var first = document.getElementById("first");
-        addMessage(first, "페이지 로딩");
+        addMessage(first, "페이지 로딩중");
       </script>
 
       <ul id="second"></ul>
@@ -81,3 +81,48 @@
     </body>
   </html>
   ```
+
+  리스트 2.1을 보면 이는 먼저 `first`와 `second`라는 id를 가진 엘리먼트들의 텍스트 색상을 지정하는 두개의 CSS 규칙을 정의하고 있습니다. 다름으로 `first` id를 가진 엘리먼트를 정의하ㅂ니다.
+
+  ```html
+  <ul id="fitst"></ul>
+  ```
+
+  다음으로, 새로운 리스트 엘리먼트를 생성하고 그것의 텍스트 내용을 설정하고 기존에 있는 엘리먼트에 덧붙이는 작업을 하는 `addMessage` 함수를 정의합니다:
+
+  ```js
+  function addMessage(element, message) {
+    var messageElement = document.createElement("li");
+    messageElement.textContent = message;
+    element.appendChild(messageElement);
+  }
+  ```
+
+  그런후에, `getElementById`라는 내장 메소드를 사용하여 문서에서 ID `first`를 가진 엘리먼트는 가져오고, 페이지가 로딩되고 있다는 것을 알려주는 메시지를 추가합니다.
+
+  ```js
+  var first = document.getElementById("first");
+  addMessage(first, "페이지 로딩중");
+  ```
+
+  다음으로 웹 페이지의 `body`에 두 개의 이벤트를 붙여줍니다. 사용자가 마우스를 `addMessage` 함수를 호출하여 `second` 리스트 엘리먼트에 `"이벤트: 마우스 움직임"`이라는 메시지를 추가할 `mousemove` 이벤트 처리기부터 해보겠습니다:
+
+  ```js
+  document.body.addEventListener("mousemove", function() {
+    var second = document.getElementById("second");
+    addMessage(second, "이벤트: 마우스 움직임");
+  })
+  ```
+
+  사용자가 페이지를 클릭할 때마다 `second` 리스트 엘리먼트에 "이벤트: 클리"이라는 메시지를 출력할 `click` 이벤트 처리기도 추가합니다.
+
+  ```js
+  document.body.addEventListener("click", function() {
+    var second = document.getElementById("second");
+    addMessage(second, "이벤트: 클릭");
+  })
+  ```
+
+  이 애플리케이션의 실행 결과는 다음 그림 2.2에 보여지는 것과 같습니다.
+  <img src="assets/figure2.2.png" width="325" height="180" alt="그림 2.2" />
+  <caption>그림 2.2 리스트 2.1에서 작성된 코드를 실행하면, 사용자의 행동에 따라 메시지가 출력됩니다.
