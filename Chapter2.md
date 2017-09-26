@@ -24,7 +24,60 @@
 <a name="the-lifecycle-overview">
 ### 2.1 라이프사이클 개요
 
-  전형적인 클라이언트 웹 애플리케이션의 라이프사이클은 사용자가 브라우저의 주소창에 URL을 입력하거나 링크를 클릭함으로 시작합니다. 가령, 어떠한 용어를 찾아보기 위해 구글 홈페이지에 간다고 해보겠습니다. 아래의 그림 2.1의 왼쪽 위에 보여지듯이 www.google.com이라는 URL을 입력할 것입니다.
+  전형적인 클라이언트 웹 애플리케이션의 라이프사이클은 사용자가 브라우저의 주소창에 URL을 입력하거나 링크를 클릭함으로 시작합니다. 가령, 어떠한 용어를 찾아보기 위해 구글 홈페이지에 간다고 해보겠습니다. 아래의 그림 2.1의 왼쪽 위에 보여지듯이 www.google.com 이라는 URL을 입력할 것입니다.
   <br /><br />
   <img src="assets/figure2.1.png" width="512" height="522" alt="그림 2.1" />
   <caption>그림 2.1 클라이언트 웹 애플리케이션의 라이프사이클은 사용자가 웹사이트의 주소를 지정함으로 시작하고 사용자가 그 웹 페이지를 떠날 때 끝납니다. 이는 페이지 구축과 이벤트 처리의 두 단계로 이루어집니다.
+
+  사용자를 대신하여, 브라우저는 요청을 처리하는(3) 서버에 전송 될 요청을 보내고(2), HTML, CSS, 그리고 자바스크립트 코드로 구성된 응답을 받습니다. 브라우저가 이 응답을 받는 순간에(4) 클라이언트 웹 애클리케이션이 진정으로 시작되는 것입니다.
+  <br />
+  클라이언트 웹 애플리케이션은 그래픽화된 사용자 인터페이스(GUI) 애플리케이션이기 때문에, 라이프사이클은 다른 GUI 애플리케이션들(표준의 데스크탑 애플리케이션이나 모바일 애플리케이션)과 비슷한 단계들을 따르고 다음의 두 단계를 수행합니다.
+
+  1. *페이지 구축* -- 사용자 인터페이스를 설정합니다.
+  2. *이벤트 처리* -- 이벤트 순환에 들어가서(5) 이벤트가 발생하기를 기다리고(6), 이벤트 처리기를 작동시킵니다.
+
+  애플리케이션의 라이프사이클은 사용자가 웹 페이지를 닫거나 떠날 때 끝납니다(7).
+  <br />
+  이제 사용자가 마우스를 움직이거나 페이지를 클릭할 때마다 메시지를 출혁하는, 사용자의 행동에 반응하는 간단한 UI를 가진 웹 애플리케이션 예제를 살펴보겠습니다. 이번 장 전반에 걸쳐 이 애플리케이션을 사용할 것입니다.
+
+  **리스트 2.1 이벤트에 반응하는 GUI를 가진 작은 웹 애플리케이션**
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>웹 앱 라이프사이클</title>
+      <style>
+        #first { color: green; }
+        #second { color: red; }
+      </style>
+    </head>
+    <body>
+      <ul id="first"></ul>
+
+      <script>
+        function addMessage(element, message) {
+          var messageElement = document.createElement("li");
+          messageElement.textContent = message;
+          element.appendChild(messageElement);
+        }
+
+        var first = document.getElementById("first");
+        addMessage(first, "페이지 로딩");
+      </script>
+
+      <ul id="second"></ul>
+
+      <script>
+        document.body.addEventListener("mousemove", function() {
+          var second = document.getElementById("second");
+          addMessage(second, "이벤트: 마우스 움직임");
+        });
+
+        document.body.addEventListener("click", funciton() {
+          var second = document.getElementById("second")
+          addMessage(second, "이벤트: 클릭");
+        });
+      </script>
+    </body>
+  </html>
+  ```
