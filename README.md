@@ -5,7 +5,7 @@
 1. [자바스크립트는 어디에나 있다](Chapter1.md#javascript-is-everywhere)
     1. [자바스크립트 언어의 이해](Chapter1.md#understanding-the-javascript-language)
     2. [브라우저의 이해](Chapter1.md#understanding-the-browser)
-    3. 최신 기술의 응용
+    3. [모범 사례 응용](Chapter1#using-current-best-practices)
     4. 기술 이동의 신장
     5. 요약
 
