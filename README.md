@@ -1,5 +1,7 @@
 # Secrets of JavaScript Ninja 한글 번역
 
+이 repository의 컨텐츠는 John Resig, Bear Bibeault, 그리고 Josip Maras의 Secrets of the JavaScript Ninja 2nd edition을 번역한 것입니다.
+
 목차
 
 1. [자바스크립트는 어디에나 있다](Chapter1.md#javascript-is-everywhere)
