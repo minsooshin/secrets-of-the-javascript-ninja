@@ -8,8 +8,8 @@
     1. [자바스크립트 언어의 이해](Chapter1.md#understanding-the-javascript-language)
     2. [브라우저의 이해](Chapter1.md#understanding-the-browser)
     3. [모범 사례 응용](Chapter1.md#using-current-best-practices)
-    4. 기술 이동의 신장
-    5. 요약
+    4. [기술 전달 능력 향상](Chapter1.md#boosting-skill-transferability)
+    5. [요약](Chapter1.md#summary)
 
 2. [실시간으로 페이지 구축하기](#building-the-page-at-runtime)
     1. 라이프사이클 개요
