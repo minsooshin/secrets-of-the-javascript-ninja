@@ -55,6 +55,7 @@
       <ul id="first"></ul>
 
       <script>
+        /* 엘리먼트에 메시지를 추가하는 함수 정의 */
         function addMessage(element, message) {
           var messageElement = document.createElement("li");
           messageElement.textContent = message;
@@ -68,11 +69,13 @@
       <ul id="second"></ul>
 
       <script>
+        /* body에 mousemove 이벤트 처리기 추가 */
         document.body.addEventListener("mousemove", function() {
           var second = document.getElementById("second");
           addMessage(second, "이벤트: 마우스 움직임");
         });
 
+        /* body에 클릭 이벤트 처리기 추가 */
         document.body.addEventListener("click", funciton() {
           var second = document.getElementById("second")
           addMessage(second, "이벤트: 클릭");
@@ -127,3 +130,16 @@
 
   <img src="assets/figure2.2.png" width="325" height="180" alt="그림 2.2" />
   <caption>그림 2.2 리스트 2.1에서 작성된 코드를 실행하면, 사용자의 행동에 따라 메시지가 출력됩니다.
+
+<a name="the-page-building-phase"></a>
+### 2.2 페이지 구축 단계
+
+  웹 애플리케이션이 작동하거나 심지어 보여지기 이전에, 그 페이지는 서버(보통 HTML, CSS, 그리고 자바스크립트 코드)로부터 받은 응답에 있는 정보를 가지고 구성이 먼저 되어야합니다. 이 페이지 구축 단계의 목표는 웹 애플리케이션의 UI를 설정하는 것인데, 이는 다음과 같은 두 단계로 이루어집니다.
+
+  1. HTML을 분석하여 DOM을 생성하는 단계
+  2. 자바스크립크 코드를 실행하는 단계
+
+  1단계는 브라우저가 HTML 노드들을 처리할 때 행해지고, 2단계는 자바스크립트 코드를 가질 수 있는 `script` 엘리먼트라는 특별한 HTML 엘리먼트를 발견했을 때 실행됩니다. 이 페이지 구축 단계를 거치면서, 브라우저는 다음의 그림 2.3에 보여지는 것처럼 필요한 만큼 이 두 과정을 오가게 됩니다.
+
+  <img src="assets/figure2.3.png" width="416" height="400" alt="그림 2.2" />
+  <caption>그림 2.3 페이지 구축 단계는 브라우저가 그 페이지의 코드를 받을 때 시작합니다. HTML를 분석해서 DOM을 생성하는 과정과 자바스크립트를 실행하는 두 과정으로 행해집니다.</caption>

@@ -13,7 +13,7 @@
 
 2. [실행 시간에 페이지 구축하기](Chapter2.md#building-the-page-at-runtime)
     1. [라이프사이클 개요](Chapter2.md#the-lifecycle-overview)
-    2. 페이지 구축 단계
+    2. [페이지 구축 단계](Chapter2.md#the-page-building-phase)
     3. 이벤트 처리
     4. 요약
     5. 예제
