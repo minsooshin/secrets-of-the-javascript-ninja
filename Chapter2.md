@@ -206,7 +206,7 @@
   <br />
   반면에, 함수 코드는 실행되기 위해서 전역 코드(전역 코드에서 호출하는 `addMessage` 함수가 `addMessage`라는 함수 코드를 실행시킵니다)나 다른 함수, 또는 브라우저와 같이 다른 곳에서 호출이 되어야합니다.
 
-  ![그림 2.6](assets/figure2.6.png)
+  <img src="assets/figure2.6.png" width="512" alt="그림 2.6" />
   <caption>자바스크립트 코드가 실행될 때의 프로그램 실행 순서</caption>
   <br /><br />
 
