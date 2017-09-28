@@ -210,6 +210,29 @@
   <caption>그림 2.6 자바스크립트 코드가 실행될 때의 프로그램 실행 순서</caption>
   <br /><br />
 
-  **페이지 생성 단계에서 자바스크립트 코드 실행하기**
+  **페이지 구축 단계에서 자바스크립트 코드 실행하기**
   <br />
-  브라우저가 페이지 생성 단계에서 `script` 노드를 발견하면 HTML 코드에 의한 DOM 생성을 멈추고 대신에 자바스크립트 코드를 실행합니다.
+  브라우저가 페이지 구축 단계에서 `script` 노드를 발견하면 HTML 코드에 의한 DOM 생성을 멈추고 대신에 자바스크립트 코드를 실행합니다.
+  <br />
+  이는 `script`엘리먼트 안에 포함된 자바스크립트의 전역 코드(또한, 전역 함수에 의해 호출되는 함수들)를 실행한다는 것을 의미합니다. 리스트 2.1을 다시 살펴보겠습니다.
+  <br />
+  그림 2.7은 자바스크립트의 전역 코드가 실행된 이후의 DOM 상태를 나타냅니다.
+
+  ![그림 2.7](assets/figure2.7.png)
+  <caption>그림 2.7 `script` 엘리먼트에 포함된 자바스크립트 코드의 실행 후 페이지의 DOM</caption>
+
+  실행 단계 별로 보겠습니다. 먼저 `addMessage`라는 함수가 정의됩니다:
+
+  ```js
+  function addMessage(element, message) {
+    var meesageElement = document.createElement("li");
+    messageElement.textContent = message;
+    element.appendChild(messageElement);
+  }
+  ```
+
+  그런 후에 `document`라는 전역 객체와 `getElementById`라는 그 객체의 메소드를 이용하여 DOM에서 엘리먼트를 추출합니다:
+
+  ```js
+  var first = document.getElementById("first");
+  ```
