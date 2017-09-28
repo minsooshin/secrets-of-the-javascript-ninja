@@ -220,6 +220,7 @@
 
   ![그림 2.7](assets/figure2.7.png)
   <caption>그림 2.7 `script` 엘리먼트에 포함된 자바스크립트 코드의 실행 후 페이지의 DOM</caption>
+  <br /><br/>
 
   실행 단계 별로 보겠습니다. 먼저 `addMessage`라는 함수가 정의됩니다:
 
