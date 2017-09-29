@@ -2,6 +2,9 @@
 
 이 repository의 컨텐츠는 John Resig, Bear Bibeault, 그리고 Josip Maras의 Secrets of the JavaScript Ninja 2nd edition을 번역한 것입니다.
 
+[Secrets of JavaScript Ninja 2nd - Amazon](https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/1617292850/ref=sr_1_1?ie=UTF8&qid=1506661011&sr=8-1&keywords=secrets+of+the+javascript+ninja)
+[Secrets of JavaScript Ninja 2nd - Yes24](http://www.yes24.com/24/goods/25201734?scode=032&OzSrank=1)
+
 목차
 
 1. [자바스크립트는 어디에나 있다](Chapter1.md#javascript-is-everywhere)
