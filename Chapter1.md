@@ -64,14 +64,14 @@
   <br />
   불행히도, 자바스크립트 엔진 개발자들이 항상 최선의 노력을 다하지만, 당신이 너무 사용하고 싶어하는 기능이 아직은 지원되지 않을 가능성이 언제나 있습니다.
   <br />
-  다행히, 여러분은 이 리스트들을 통해서 다양한 브라우저의 기능 지원 상태를 확인할 수 있습니다: [https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/), [http://kangax.github.io/compat-table/es2016plus/](http://kangax.github.io/compat-table/es2016plus/), and [https://kangax.github.io/compat-table/esnext/](https://kangax.github.io/compat-table/esnext/).
+  다행히, 여러분은 이 리스트들을 통해서 다양한 브라우저의 기능 지원 상태를 확인할 수 있습니다: <a href="https://kangax.github.io/compat-table/es6/" target="_blank">https://kangax.github.io/compat-table/es6/</a>, <a href="http://kangax.github.io/compat-table/es2016plus/" target="_blank">http://kangax.github.io/compat-table/es2016plus/</a>, and <a href="https://kangax.github.io/compat-table/esnext/" target="_blank">https://kangax.github.io/compat-table/esnext/</a>.
 
 #### 1.1.2 트렌스파일러를 이용한 미지원 자바스크립트 접근
   브라우저의 빠른 배포 주기때문에 우리는 자바스크립트 기능이 지원되기까지 오래 기다리지 않아도 됩니다. 하지만 우리가 최신 자바스크립트 기능의 모든 이점을 활용하고 싶지만 까다로운 현실적인 문제로 그러지 못하게 되면 어떻게 될까요? 우리의 웹 애플리케이션 사용자들은 여전히 이전 브라우저를 사용할 수도 있지 않을까요?
   <br />
   이 문제에 대한 한가지 대답은 최신 자바스크립트 코드를 대부분의 현재 브라우저들에서 제대로 작동하는 코드로 변환시켜주는 툴인 트렌스파일러(transforation + complier)를 이용하라는 것입니다.
   <br />
-  오늘날의 가장 인기있는 트렌스파일러들은 [Traceur](https://github.com/google/traceur-compiler)와 [Babel](https://.babeljs.io/)입니다. 이들을 설정하는것은 쉽습니다. [https://github.com/google/traceur-compiler/wiki/Getting-Started](https://github.com/google/traceur-compiler/wiki/Getting-Started)나 [http://babeljs.io/docs/setup/](http://babeljs.io/docs/setup/) 같은 튜토리얼을 따라하면 됩니다.
+  오늘날의 가장 인기있는 트렌스파일러들은 <a href="https://github.com/google/traceur-compiler" target="_blank">Traceur</a>와 <a href="https://.babeljs.io/" target="_blank">Babel</a>입니다. 이들을 설정하는것은 쉽습니다. <a href="https://github.com/google/traceur-compiler/wiki/Getting-Started" target="_blank">https://github.com/google/traceur-compiler/wiki/Getting-Started</a>나 <a href="http://babeljs.io/docs/setup/" target="_blank">http://babeljs.io/docs/setup/</a> 같은 튜토리얼을 따라하면 됩니다.
   <br />
   이 책에서는, 특별히 브라우저에서 자바스크립트 코드를 실행하는데 집중할 것입니다. 브라우저 플랫폼을 효과적으로 사용하려면 브라우저 내부의 동작을 연구해야합니다.
 
@@ -106,7 +106,7 @@
 
 #### 1.3.1 디버깅
   자바스크립트 디버깅은 변수의 값을 확인하기 위해 `alert`를 사용하는 것이라고 여겨졌습니다. 다행히도, Firefox용 Firebug 개발자 확장 기능 덕분에 자바스크립트 코드를 디버그 하는 능력은 상당히 발전했습니다. 비슷한 도구들이 모든 주요 브라우저들에도 개발되었습니다:
-  - *Firebug* -- 파이어폭스용 인기 개발자 확장 프로그램 ([http://getfirebug.com/](http://getfirebug.com/))
+  - *Firebug* -- 파이어폭스용 인기 개발자 확장 프로그램 (<a href="http://getfirebug.com/" target="_blank">http://getfirebug.com/</a>)
   - *크롬 개발자 도구* -- 크롬과 오페라에서 사용되는 크롬 팀에 의해 개발된 도구
   - *파이어폭스 개발자 도구* -- 파이어 폭스 팀이 만든 파이어 폭스에 내장되어 있는 도구
   - *F12 개발자 도구* -- 인터넷 익스플로러와 마이크로소프트 엣지에 내장되어 있는 도구
@@ -156,7 +156,7 @@
 
   우리는 내장 된 콘솔 객체의 `time`과 `timeEnd` 메소드에 대한 두 번의 호출로 측정 할 코드의 실행을 구분합니다.
   <br />
-  작업이 실행되기 전에 `console.time`에 대한 호출은 이름을 가지고 타이머를 시작합니다 (이 경우에는 My operation). 그런 다음 `for` 루프에서 특정 횟수만큼 코드를 실행합니다 (이 경우 maxCount 횟수만큼). 코드의 단일 연산이 안정적으로 측정하기에는 너무 빨리 실행되기 때문에 측정 가능한 값을 얻기 위해 코드를 여러 번 수행해야합니다. 종종, 이 수는 측정되는 코드의 특성에 따라 수만 또는 수백만이 될 수 있습니다. 약간의 시행 착오를 통해 합리적인 가치를 선택할 수 있습니다.
+  작업이 실행되기 전에 `console.time`에 대한 호출은 이름을 가지고 타이머를 시작합니다 (이 경우에는 My operation). 그런 다음 `for` 루프에서 특정 횟수만큼 코드를 실행합니다 (이 경우 `maxCount` 횟수만큼). 코드의 단일 연산이 안정적으로 측정하기에는 너무 빨리 실행되기 때문에 측정 가능한 값을 얻기 위해 코드를 여러 번 수행해야합니다. 종종, 이 수는 측정되는 코드의 특성에 따라 수만 또는 수백만이 될 수 있습니다. 약간의 시행 착오를 통해 합리적인 가치를 선택할 수 있습니다.
   <br />
   작업이 끝나면 동일한 이름의 `console.timeEnd` 메서드를 호출합니다. 그러면 브라우저가 타이머가 시작된 이후 경과 한 시간을 출력합니다.
   <br />
@@ -167,8 +167,8 @@
   Bob이 웹 개발을 처음 배우게되었을 때 각 브라우저에는 스크립트와 UI 스타일을 해석하는 고유 한 방법이 있었으며 그 방법이 가장 좋은 방법이라고 주장하여 모든 개발자가 좌절감을 느끼게했습니다. 다행히도 HTML, CSS, DOM API 및 자바스크립트가 모두 표준화되어 브라우저 전쟁이 끝났으며 개발자는 효과적인 크로스 브라우저 자바스크립트 응용 프로그램으로 전환했습니다. 실제로 웹 사이트를 응용 프로그램으로 취급하는 데 초점을 두어 데스크탑 응용 프로그램에서 웹 응용 프로그램으로 넘어가는 많은 아이디어, 도구 및 기술을 이끌어 냈습니다. 이제 클라이언트 측 웹 개발에서 비롯된 아이디어, 도구 및 기술이 다른 응용 프로그램 도메인으로 침투하여 지식 및 도구 전송이 다시 발생했습니다.
   <br />
   핵심 API에 대한 지식을 바탕으로 기본적인 자바스크립트 원칙을 깊이있게 이해하면 더 다재다능한 개발자가 될 수 있습니다. 브라우저와 Node.js (브라우저에서 파생 된 환경)를 사용하여 상상할 수있는 거의 모든 유형의 애플리케이션을 개발할 수 있습니다:
-  - *데스크탑 애플리케이션** -- NW.js([http://nwjs.io](http://nwjs.io/)) 혹은 Electron([http://electron.atom.io/](http://electron.atom.io/)). 이러한 기술은 대개 브라우저를 감싸서 표준 HTML, CSS 및 자바스크립트 (즉, 핵심 자바스크립트 및 브라우저 지식에 의존 할 수있는)로 데스크탑 UI를 구축하고 파일 시스템과 상호 작용할 수있는 추가 지원을 제공합니다. 윈도우즈, 맥 및 리눅스에서 동일한 모양과 느낌의 플랫폼 독립적인 데스크톱 애플리케이션을 만들 수 있습니다.
-  - *모바일 애플리케이션* -- Apache Cordova([https://cordova.apache.org/](https://cordova.apache.org/)). 웹 기술로 구축 된 데스크톱 응용 프로그램과 마찬가지로 모바일 애플리케이션용 프레임워크는 래핑된 브라우저를 사용하지만 모바일 플랫폼과 상호 작용할 수있는 추가 플랫폼에 특성화된 API를 사용합니다.
+  - *데스크탑 애플리케이션** -- NW.js(<a href="http://nwjs.io/" target="_blank">http://nwjs.io/</a>) 혹은 Electron(<a href="http://electron.atom.io/" target="_blank">http://electron.atom.io/</a>). 이러한 기술은 대개 브라우저를 감싸서 표준 HTML, CSS 및 자바스크립트 (즉, 핵심 자바스크립트 및 브라우저 지식에 의존 할 수있는)로 데스크탑 UI를 구축하고 파일 시스템과 상호 작용할 수있는 추가 지원을 제공합니다. 윈도우즈, 맥 및 리눅스에서 동일한 모양과 느낌의 플랫폼 독립적인 데스크톱 애플리케이션을 만들 수 있습니다.
+  - *모바일 애플리케이션* -- Apache Cordova(<a href="https://cordova.apache.org/" target="_blank">https://cordova.apache.org/</a>). 웹 기술로 구축 된 데스크톱 응용 프로그램과 마찬가지로 모바일 애플리케이션용 프레임워크는 래핑된 브라우저를 사용하지만 모바일 플랫폼과 상호 작용할 수있는 추가 플랫폼에 특성화된 API를 사용합니다.
   - *서버측 애플리케이션과 Node.js를 이용한 임베디드 장치용 애플리케이션* -- 브라우저와 동일한 기본 원칙을 많이 사용하는 브라우저에서 파생 된 환경입니다. 예를 들면, Node.js는 자바스크립트 코드를 실행하고 이벤트에 의존합니다.
 
   Ann은 그녀가 얼마나 운이 좋은지 알지 못합니다 (비록 Bob은 잘 알고 있습니다만). 표준 데스크톱 애플리케이션, 모바일 애플리케이션, 서버 측 애플리케이션 또는 임베디드 애플리케이션을 구축해야하는지 여부는 중요하지 않습니다. 이러한 모든 유형의 애플리케이션은 표준 클라이언트 측 웹 애플리케이션과 동일한 기본 원칙을 일부 공유합니다. 자바스크립트의 핵심 메커니즘이 어떻게 작동하는지 이해하고 브라우저에서 제공하는 핵심 API (예 : Node.js의 메커니즘과 공통점이 많은 이벤트)를 이해함으로써 개발 기술을 전면적으로 향상시킬 수 있습니다. 이 과정에서보다 다양한 개발자가되어 다양한 문제를 해결할 수있는 지식과 이해를 얻게됩니다. AWS Lambda와 같은 서비스에 자바스크립트 API를 사용하여 애플리케이션의 클라우드 구성 요소를 배포, 유지 관리 및 제어함으로써 클라우드 기반의 자체 서버리스 애플리케이션을 구축 할 수도 있습니다.
